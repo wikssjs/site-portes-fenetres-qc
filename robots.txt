@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /soumission-fenetres/
+
+Sitemap: https://experts-fenetres.ca/sitemap-index.xml
