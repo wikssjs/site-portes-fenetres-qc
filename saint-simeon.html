@@ -435,6 +435,7 @@
       <div style="margin:2.5rem 0;text-align:left">
         <h2 style="font-size:1.25rem;font-weight:800;margin-bottom:1rem;color:#fff">Estimez le coût de vos fenêtres</h2>
         <iframe
+          id="fokuz-calc"
           src="https://fokuz.ca/calculateur-fenetres?embed=1&amp;cta=button&amp;url=https%3A%2F%2Fsoumissionrenovation.ca%2Ffr%2Fformulaire%2Fservice%2Fportes-et-fenetres%3Fslug%3Daccueil%26utm_campaign%3Djb%23p-0"
           width="100%"
           height="820"
@@ -444,6 +445,14 @@
           loading="lazy">
         </iframe>
       </div>
+      <script>
+        window.addEventListener('message', function(e) {
+          if (e.data && e.data.type === 'fokuz-resize') {
+            var f = document.getElementById('fokuz-calc');
+            if (f) f.style.height = e.data.height + 'px';
+          }
+        });
+      </script>
       <a href="/soumission-fenetres/" target="_blank" rel="noopener sponsored"
          class="pf-btn pf-btn--white" style="padding:1.125rem 2.5rem;font-size:1.0625rem;display:inline-flex;align-items:center;gap:.625rem">
         <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -624,11 +633,6 @@ if (_stickyBar) {
     if (_formEl) {
       var rect = _formEl.getBoundingClientRect();
       _stickyBar.style.display = (rect.top < window.innerHeight && rect.bottom > 0) ? 'none' : '';
-    }
-  }, {passive: true});
-}
-</script></body>
-</html>? 'none' : '';
     }
   }, {passive: true});
 }

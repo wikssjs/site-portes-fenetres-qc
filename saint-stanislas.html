@@ -39,7 +39,7 @@
         "name": "Saint-Stanislas",
         "containedInPlace": {
           "@type": "AdministrativeArea",
-          "name": "Saguenay--Lac-Saint-Jean (02)"
+          "name": "Mauricie (04)"
         }
       },
       "priceRange": "$$",
@@ -61,8 +61,8 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Saguenay--Lac-Saint-Jean (02)",
-          "item": "https://experts-fenetres.ca/region/saguenay-lac-saint-jean-02"
+          "name": "Mauricie (04)",
+          "item": "https://experts-fenetres.ca/region/mauricie-04"
         },
         {
           "@type": "ListItem",
@@ -94,7 +94,7 @@
     <nav class="dk-breadcrumb__inner">
       <a href="/">Accueil</a>
       <span class="dk-breadcrumb__sep">›</span>
-      <a href="/region/saguenay-lac-saint-jean-02">Saguenay--Lac-Saint-Jean (02)</a>
+      <a href="/region/mauricie-04">Mauricie (04)</a>
       <span class="dk-breadcrumb__sep">›</span>
       <span class="dk-breadcrumb__current">Portes et Fenêtres Saint-Stanislas</span>
     </nav>
@@ -110,7 +110,7 @@
       <div class="dk-hero__kicker">
         <span class="dk-badge-brand">
           <span class="pf-pulse" style="width:.4rem;height:.4rem;border-radius:50%;background:var(--accent);display:inline-block;flex-shrink:0"></span>
-          8 projets de portes et fenetres soumis cette semaine
+          15 projets de portes et fenetres soumis cette semaine
         </span>
       </div>
 
@@ -435,6 +435,7 @@
       <div style="margin:2.5rem 0;text-align:left">
         <h2 style="font-size:1.25rem;font-weight:800;margin-bottom:1rem;color:#fff">Estimez le coût de vos fenêtres</h2>
         <iframe
+          id="fokuz-calc"
           src="https://fokuz.ca/calculateur-fenetres?embed=1&amp;cta=button&amp;url=https%3A%2F%2Fsoumissionrenovation.ca%2Ffr%2Fformulaire%2Fservice%2Fportes-et-fenetres%3Fslug%3Daccueil%26utm_campaign%3Djb%23p-0"
           width="100%"
           height="820"
@@ -444,6 +445,14 @@
           loading="lazy">
         </iframe>
       </div>
+      <script>
+        window.addEventListener('message', function(e) {
+          if (e.data && e.data.type === 'fokuz-resize') {
+            var f = document.getElementById('fokuz-calc');
+            if (f) f.style.height = e.data.height + 'px';
+          }
+        });
+      </script>
       <a href="/soumission-fenetres/" target="_blank" rel="noopener sponsored"
          class="pf-btn pf-btn--white" style="padding:1.125rem 2.5rem;font-size:1.0625rem;display:inline-flex;align-items:center;gap:.625rem">
         <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -484,28 +493,28 @@
         </p>
         <div class="dk-footer__pulse-row">
           <span class="pf-pulse" style="width:.4375rem;height:.4375rem;border-radius:9999px;background:var(--p500);display:inline-block"></span>
-          8 projets de portes et fenetres soumis cette semaine
+          15 projets de portes et fenetres soumis cette semaine
         </div>
       </div>
 
       <div>
-        <h4 class="dk-footer__col-label">Portes et fenetres en Saguenay--Lac-Saint-Jean (02)</h4>
+        <h4 class="dk-footer__col-label">Portes et fenetres en Mauricie (04)</h4>
         <div class="dk-footer__links">
-          <a href="/saint-nazaire">Saint-Nazaire</a>
-          <a href="/belle-riviere">Belle-Rivière</a>
-          <a href="/sainte-jeanne-d-arc">Sainte-Jeanne-d'Arc</a>
-          <a href="/ferland-et-boilleau">Ferland-et-Boilleau</a>
-          <a href="/saint-prime">Saint-Prime</a>
-          <a href="/notre-dame-de-lorette">Notre-Dame-de-Lorette</a>
-          <a href="/chambord">Chambord</a>
-          <a href="/la-dore">La Doré</a>
-          <a href="/metabetchouan-lac-a-la-croix">Métabetchouan--Lac-à-la-Croix</a>
-          <a href="/lac-achouakan">Lac-Achouakan</a>
-          <a href="/mont-valin">Mont-Valin</a>
-          <a href="/lalemant">Lalemant</a>
-          <a href="/saguenay">Saguenay</a>
-          <a href="/saint-andre-du-lac-saint-jean">Saint-André-du-Lac-Saint-Jean</a>
-          <a href="/l-anse-saint-jean">L'Anse-Saint-Jean</a>
+          <a href="/coucoucache">Coucoucache</a>
+          <a href="/trois-rivieres">Trois-Rivières</a>
+          <a href="/la-tuque">La Tuque</a>
+          <a href="/yamachiche">Yamachiche</a>
+          <a href="/sainte-thecle">Sainte-Thècle</a>
+          <a href="/grandes-piles">Grandes-Piles</a>
+          <a href="/lac-masketsi">Lac-Masketsi</a>
+          <a href="/sainte-anne-de-la-perade">Sainte-Anne-de-la-Pérade</a>
+          <a href="/louiseville">Louiseville</a>
+          <a href="/sainte-genevieve-de-batiscan">Sainte-Geneviève-de-Batiscan</a>
+          <a href="/riviere-de-la-savane">Rivière-de-la-Savane</a>
+          <a href="/saint-maurice">Saint-Maurice</a>
+          <a href="/saint-alexis-des-monts">Saint-Alexis-des-Monts</a>
+          <a href="/saint-paulin">Saint-Paulin</a>
+          <a href="/sainte-angele-de-premont">Sainte-Angèle-de-Prémont</a>
         </div>
       </div>
 
@@ -513,7 +522,7 @@
         <h4 class="dk-footer__col-label">Navigation</h4>
         <nav class="dk-footer__nav">
           <a href="/">Accueil</a>
-          <a href="/region/saguenay-lac-saint-jean-02">Saguenay--Lac-Saint-Jean (02)</a>
+          <a href="/region/mauricie-04">Mauricie (04)</a>
           <a href="/sitemap-index.xml">Plan du site XML</a>
         </nav>
       </div>
@@ -522,7 +531,7 @@
 
     <div class="dk-footer__bottom">
       <p>© 2026 Experts Fenêtres · Tous droits réservés</p>
-      <p>Portes et Fenêtres · Saint-Stanislas · Saguenay--Lac-Saint-Jean (02)</p>
+      <p>Portes et Fenêtres · Saint-Stanislas · Mauricie (04)</p>
     </div>
   </div>
 </footer>
