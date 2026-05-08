@@ -110,7 +110,7 @@
       <div class="dk-hero__kicker">
         <span class="dk-badge-brand">
           <span class="pf-pulse" style="width:.4rem;height:.4rem;border-radius:50%;background:var(--accent);display:inline-block;flex-shrink:0"></span>
-          30 projets de portes et fenetres soumis cette semaine
+          53 projets de portes et fenetres soumis cette semaine
         </span>
       </div>
 
@@ -447,9 +447,13 @@
       </div>
       <script>
         window.addEventListener('message', function(e) {
-          if (e.data && e.data.type === 'fokuz-resize') {
+          if (!e.data) return;
+          if (e.data.type === 'fokuz-resize') {
             var f = document.getElementById('fokuz-calc');
             if (f) f.style.height = e.data.height + 'px';
+          }
+          if (e.data.type === 'fokuz-event' && typeof gtag === 'function') {
+            gtag('event', e.data.event, e.data.params);
           }
         });
       </script>
@@ -493,28 +497,28 @@
         </p>
         <div class="dk-footer__pulse-row">
           <span class="pf-pulse" style="width:.4375rem;height:.4375rem;border-radius:9999px;background:var(--p500);display:inline-block"></span>
-          30 projets de portes et fenetres soumis cette semaine
+          53 projets de portes et fenetres soumis cette semaine
         </div>
       </div>
 
       <div>
         <h4 class="dk-footer__col-label">Portes et fenetres en Laurentides (15)</h4>
         <div class="dk-footer__links">
+          <a href="/mont-tremblant">Mont-Tremblant</a>
+          <a href="/sainte-marguerite-du-lac-masson">Sainte-Marguerite-du-Lac-Masson</a>
+          <a href="/wentworth">Wentworth</a>
+          <a href="/mont-blanc">Mont-Blanc</a>
+          <a href="/sainte-sophie">Sainte-Sophie</a>
+          <a href="/sainte-anne-des-plaines">Sainte-Anne-des-Plaines</a>
+          <a href="/labelle">Labelle</a>
           <a href="/saint-colomban">Saint-Colomban</a>
-          <a href="/saint-joseph-du-lac">Saint-Joseph-du-Lac</a>
-          <a href="/brownsburg-chatham">Brownsburg-Chatham</a>
-          <a href="/ferme-neuve">Ferme-Neuve</a>
-          <a href="/riviere-rouge">Rivière-Rouge</a>
-          <a href="/saint-hippolyte">Saint-Hippolyte</a>
-          <a href="/huberdeau">Huberdeau</a>
-          <a href="/arundel">Arundel</a>
-          <a href="/deux-montagnes">Deux-Montagnes</a>
-          <a href="/baie-des-chaloupes">Baie-des-Chaloupes</a>
-          <a href="/blainville">Blainville</a>
-          <a href="/l-ascension">L'Ascension</a>
-          <a href="/lac-tremblant-nord">Lac-Tremblant-Nord</a>
-          <a href="/lac-douaire">Lac-Douaire</a>
-          <a href="/morin-heights">Morin-Heights</a>
+          <a href="/saint-jerome">Saint-Jérôme</a>
+          <a href="/saint-placide">Saint-Placide</a>
+          <a href="/chute-saint-philippe">Chute-Saint-Philippe</a>
+          <a href="/sainte-marthe-sur-le-lac">Sainte-Marthe-sur-le-Lac</a>
+          <a href="/saint-sauveur">Saint-Sauveur</a>
+          <a href="/notre-dame-de-pontmain">Notre-Dame-de-Pontmain</a>
+          <a href="/mille-isles">Mille-Isles</a>
         </div>
       </div>
 

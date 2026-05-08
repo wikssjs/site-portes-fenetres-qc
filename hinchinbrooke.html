@@ -110,7 +110,7 @@
       <div class="dk-hero__kicker">
         <span class="dk-badge-brand">
           <span class="pf-pulse" style="width:.4rem;height:.4rem;border-radius:50%;background:var(--accent);display:inline-block;flex-shrink:0"></span>
-          8 projets de portes et fenetres soumis cette semaine
+          11 projets de portes et fenetres soumis cette semaine
         </span>
       </div>
 
@@ -447,9 +447,13 @@
       </div>
       <script>
         window.addEventListener('message', function(e) {
-          if (e.data && e.data.type === 'fokuz-resize') {
+          if (!e.data) return;
+          if (e.data.type === 'fokuz-resize') {
             var f = document.getElementById('fokuz-calc');
             if (f) f.style.height = e.data.height + 'px';
+          }
+          if (e.data.type === 'fokuz-event' && typeof gtag === 'function') {
+            gtag('event', e.data.event, e.data.params);
           }
         });
       </script>
@@ -493,28 +497,28 @@
         </p>
         <div class="dk-footer__pulse-row">
           <span class="pf-pulse" style="width:.4375rem;height:.4375rem;border-radius:9999px;background:var(--p500);display:inline-block"></span>
-          8 projets de portes et fenetres soumis cette semaine
+          11 projets de portes et fenetres soumis cette semaine
         </div>
       </div>
 
       <div>
         <h4 class="dk-footer__col-label">Portes et fenetres en Montérégie (16)</h4>
         <div class="dk-footer__links">
-          <a href="/sainte-christine">Sainte-Christine</a>
-          <a href="/huntingdon">Huntingdon</a>
-          <a href="/saint-paul-d-abbotsford">Saint-Paul-d'Abbotsford</a>
-          <a href="/lery">Léry</a>
-          <a href="/saint-damase">Saint-Damase</a>
-          <a href="/saint-jean-sur-richelieu">Saint-Jean-sur-Richelieu</a>
-          <a href="/saint-barnabe-sud">Saint-Barnabé-Sud</a>
-          <a href="/saint-anicet">Saint-Anicet</a>
-          <a href="/vaudreuil-dorion">Vaudreuil-Dorion</a>
-          <a href="/contrecoeur">Contrecoeur</a>
-          <a href="/saint-marc-sur-richelieu">Saint-Marc-sur-Richelieu</a>
-          <a href="/saint-clet">Saint-Clet</a>
-          <a href="/saint-louis-de-gonzague">Saint-Louis-de-Gonzague</a>
+          <a href="/saint-ours">Saint-Ours</a>
+          <a href="/rougemont">Rougemont</a>
+          <a href="/saint-alexandre">Saint-Alexandre</a>
           <a href="/calixa-lavallee">Calixa-Lavallée</a>
-          <a href="/saint-mathias-sur-richelieu">Saint-Mathias-sur-Richelieu</a>
+          <a href="/ormstown">Ormstown</a>
+          <a href="/saint-philippe">Saint-Philippe</a>
+          <a href="/akwesasne">Akwesasne</a>
+          <a href="/sainte-angele-de-monnoir">Sainte-Angèle-de-Monnoir</a>
+          <a href="/les-cedres">Les Cèdres</a>
+          <a href="/sainte-barbe">Sainte-Barbe</a>
+          <a href="/godmanchester">Godmanchester</a>
+          <a href="/saint-bernard-de-michaudville">Saint-Bernard-de-Michaudville</a>
+          <a href="/tres-saint-redempteur">Très-Saint-Rédempteur</a>
+          <a href="/saint-stanislas-de-kostka">Saint-Stanislas-de-Kostka</a>
+          <a href="/saint-joseph-de-sorel">Saint-Joseph-de-Sorel</a>
         </div>
       </div>
 

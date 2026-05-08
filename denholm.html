@@ -447,9 +447,13 @@
       </div>
       <script>
         window.addEventListener('message', function(e) {
-          if (e.data && e.data.type === 'fokuz-resize') {
+          if (!e.data) return;
+          if (e.data.type === 'fokuz-resize') {
             var f = document.getElementById('fokuz-calc');
             if (f) f.style.height = e.data.height + 'px';
+          }
+          if (e.data.type === 'fokuz-event' && typeof gtag === 'function') {
+            gtag('event', e.data.event, e.data.params);
           }
         });
       </script>
